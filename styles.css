@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.header {
+  background-color: #33d4ff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 85px;
+  padding: 5px 10%;
+}
+
+.header .logo {
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.header .logo img {
+  height: 100px;
+  width: auto;
+  transition: all 0.3s;
+}
+
+.header .logo img:hover {
+  transform: scale(1.2);
+}
+
+.header .nav-links {
+  list-style: none;
+}
+
+.header .nav-links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.header .nav-links li:hover {
+  transform: scale(1.1);
+}
+
+.header .nav-links a {
+  font-size: 700;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.header .nav-links li a:hover {
+  color: #191970;
+}
+
+.header .btn button {
+  font-weight: 700;
+  color: #ffffff;
+  padding: 9px 25px;
+  color: #ffffff;
+  background: #191970;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover {
+  background-color: #000080;
+  transform: scale(1.1);
+}
+
+/* formularios  */
+
+.formulario {
+    align-items: center;
+    margin: 3% 20%;
+    padding: 2% 5%;
+}
+
+.botonForm{
+    margin: 5%;
+}
+#email.form-control::placeholder,
+#usuario.form-control::placeholder,
+#contraseña.form-control::placeholder{
+    opacity: 0.5;
+}
+ 
+.form-group{
+    margin-top: 3%;
+}
