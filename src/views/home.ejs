@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clima</title>
+    <%- include("partials/head")%>
+    <script src="/js/index.js" defer></script>
+  </head>
+  <body>
+    <%- include('partials/navigation')%>
+    <div class="container d-flex justify-content-center">
+      <div class="d-flex flex-column align-items-center mt-5">
+        <% if (usuario) { %>
+          <h1>Bienvenido, <%= usuario %>!</h1>
+        <% } %>
+        <h1>Consulta de Clima</h1>
+      <div class="mb-3">
+        <label for="ciudadInput" class="form-label">Ingresa el nombre de la ciudad:</label>
+        <input type="text" class="form-control" id="ciudadInput" placeholder="Ejemplo: Madrid">
+      </div>
+
+      <div>
+        <button class="btn btn-primary mb-3" id="consultarBtn" onclick="fetchWeather(document.getElementById('ciudadInput').value)">Consultar</button>
+
+        
+      </div>
+
+        <div class="container shadow-lg rounded " id="weatherResults"></div>
+        
+      </div>
+    </div>
+  </body>
+</html>

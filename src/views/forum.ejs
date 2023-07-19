@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Muro</title>
+        <%- include("partials/head")%>
+        <script src="/js/index.js"></script>
+    </head>
+
+    <body>
+    <%- include("partials/navigation")%>
+
+    <h1 class="text-center" style="margin-top: 1%;">Comentarios acerca del clima</h1>
+    
+    <div class="container d-flex justify-content-center">
+        <div class="d-flex flex-column mt-4" style="width: 80%;">
+        <form action="/forum" method="post"></form>
+        <input type="hidden" id="nombreUsuario" value="<%= usuario %>">
+            <div class="mb-3">
+                <input type="text" class="form-control w-100" id="comentario" name="mensaje" placeholder="Escribe aquí tu comentario">
+                <button type="button" onclick="publicarComentario(document.getElementById('comentario').value)" class="btn btn-primary mt-2">Publicar</button>
+            </div>
+
+            <div id="espacioComentarios">   
+            </div>
+        </div>
+    </div>
+        
+    </body>
+</html>

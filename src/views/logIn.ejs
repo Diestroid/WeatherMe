@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <%- include("partials/head")%>
+</head>
+
+<body>
+
+    <%- include("partials/navigation")%>
+
+    <h1 class="text-center" style="margin-top: 1%;">Weather Me</h1>
+
+<!-- registro -->
+
+    <div class="rounded shadow-lg formulario">
+        <h2>Iniciar sesión</h2>
+
+        <form action="/logIn" method="POST">
+            <div class="form-group">
+                <label for="usuario">Usuario: </label>
+                <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Ingrese usuario">
+            </div>
+            <div class="form-group">
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" class="form-control" id="contraseña" name="contraseña" placeholder="Ingrese contraseña">
+            </div>
+            <button type="submit" class="btn btn-primary botonForm">Iniciar sesión</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <% if(typeof alert != "undefined") { %>
+        <script>
+            Swal.fire({
+                title: '<%= alertTitle %>',
+                text: '<%= alertMessage %>',
+                icon: '<%= alertIcon %>',
+                showConfirmButton: '<%= showConfirmButton %>'  
+            }).then(()=>{
+                window.location= '<%= ruta %>'
+            })
+        </script> 
+        <% } %>
+</body>
+</html>

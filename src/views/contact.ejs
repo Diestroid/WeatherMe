@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+    <%- include("partials/head")%>
+  </head>
+  <body>
+    <%- include("partials/navigation")%>
+
+    <div class="d-flex vh-100 align-items-center justify-content-center">
+      <div class="card text-bg-dark ">
+        <div class="card-header">
+          <h3 class="fw-bold">Contact me</h3>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="mb-3">
+              <label for="entradaEmail" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="entradaEmail" placeholder="email" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="entradaMensaje" class="form-label">Mensaje</label>
+              <input type="text" class="form-control" id="entradaMensaje" placeholder="escribe un mensaje">
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="alert('Era bait bro. If you arent our teacher, it means that you are the shady Indian who looks at my GitHub')">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
